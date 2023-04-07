@@ -1,0 +1,323 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+:root{
+    --background-page: linear-gradient(180deg, rgb(238, 4, 44),rgb(202, 203, 40));
+    --background-left: linear-gradient(to bottom, rgb(70, 5, 4), rgb(110, 0, 0), rgb(140, 0, 0), rgb(180, 0, 0) , rgb(210, 0, 0), rgb(255, 0, 0));
+    --primary-color: rgb(0, 255, 0);
+    --color-h4: rgb(0, 170, 0);
+    --color-h2: #fff;
+    --pourcent-color: #dfdfdf;
+    --title2: rgb(140, 0, 0);
+    --annees-color: rgb(255, 0, 0);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-page);
+    min-height: 100vh;
+}
+
+/* CONTENEUR PUIS DEUX COLONNES */
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;    
+    background: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .side_left{
+    background: var(--background-left);
+    position: relative;
+    padding: 40px;
+}
+
+.container .side_right{
+    background: #fff;
+    position: relative;
+    padding: 40px;
+}
+
+/* PARTIE GAUCHE PRESENTATION */
+
+.presentation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255,255, 0.3);
+}
+
+.presentation .img-presentation{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.presentation .img-presentation img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.presentation h2{
+    color: var(--color-h2);
+    font-size: 1.7em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+
+.presentation h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* PARTIE GAUCHE CONTACT INFO */
+
+.contact-info{
+    padding-top: 40px;
+}
+
+.title{
+    color: var(--color-h2);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.contact-info ul{
+    position: relative;
+}
+
+.contact-info ul li{
+    position: relative;
+    list-style-type: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contact-info ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.contact-info ul li span{
+    font-weight: 400;
+    font-size: 1.1em;
+    color: var(--color-h2);
+}
+
+/* PARTIE GAUCHE CONTACT INFO  EDUCATION */
+
+.contact-info.education li{
+    margin-bottom: 15px;
+}
+
+.contact-info.education h5{
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.contact-info.education h4{
+    color: var(--color-h2);
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.contact-info.education h6{
+    color: #e6e6e6;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.contact-info.langage .pourcent{
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: var(--pourcent-color);
+    display: block;
+    margin-top: 5px;
+}
+
+.contact-info.langage  .pourcent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+/* PARTIE DROITE PROFIL */
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 10px;
+}
+
+.title2{
+    color: var(--title2);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #222;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 1px 0;
+}
+
+/* PARTIE DROITE EXPERIENCE */
+
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .annees-agence{
+    min-width: 150px;
+}
+
+.about .box .annees-agence h5{
+    text-transform: uppercase;
+    color: var(--annees-color);
+    font-weight: 600;
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: var(--color-h4);
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+}
+
+.about .box .text h6{
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--title2);
+    margin: 2px 0;
+}
+
+/* PARTIE DROITE COMPETENCES */
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: var(--annees-color);
+    font-weight: 600;
+}
+
+.skills .box .pourcent{
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background: var(--pourcent-color);
+}
+
+.skills .box .pourcent div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+
+/* PARTIE DROITE CENTRE D'INTERET */
+
+.interet ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.interet ul li{
+    list-style-type: none;
+    color: #222;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interet ul li i{
+    color: var(--color-h4);
+    font-size: 18px;
+    width: 20px;
+    margin-right: 10px;
+    color: rgb(185, 142, 167);
+}
+
+
+
+
+/*   RESPONSIVE    */
+
+
+@media(max-width:1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interet ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media(max-width:600px){
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_compagny{
+        margin-bottom: 5px;
+    }
+    .interet ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skills .box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
